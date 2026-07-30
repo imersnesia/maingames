@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta tag ini SANGAT PENTING untuk mencegah zoom dan memastikan game full mentok di layar HP -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <!-- Judul yang akan muncul di Tab Browser -->
+    <title>Metal Bastion-Tank Defender by Terry Katar</title>
+    
+    <!-- Meta tags opsional untuk SEO dan Preview link WhatsApp/Telegram -->
+    <meta name="description" content="Mainkan iMers Galactic Shooter - Game arcade luar angkasa HTML5.">
+    <meta property="og:title" content="iMers Galactic Shooter">
+    <meta property="og:description" content="Mainkan game luar angkasa ini dan puncaki Leaderboard!">
+    <meta name="theme-color" content="#030014">
+
+    <style>
+        /* Reset bawaan browser */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 
+           Setel html dan body agar mengambil tepat 100% layar.
+           overflow: hidden memastikan layar utama (Vercel) tidak bisa di-scroll, 
+           jadi semua interaksi sentuhan langsung diteruskan ke iFrame (Gamenya).
+        */
+        html, body {
+            width: 100%;
+            /* Gunakan 100dvh (Dynamic Viewport Height) agar tidak tertutup address bar Safari iOS/Chrome Android */
+            height: 100vh;
+            height: 100dvh; 
+            background-color: #030014; /* Samakan dengan warna background game agar seamless saat loading */
+            overflow: hidden; 
+            overscroll-behavior: none; /* Mencegah efek bounce-scroll saat ditarik ke bawah */
+        }
+
+        /* Styling iFrame agar memenuhi seluruh ruang tanpa sisa/border */
+        .game-frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- iFrame menuju link Google Apps Script lo -->
+    <iframe 
+        class="game-frame" 
+        src="https://script.google.com/macros/s/AKfycbz-c9LQpfVILWEDbrI18T3MO-JHYiUyuHIgkqLR6XmckAOLu0c-d89DzGZxTE-DnJXW/exec" 
+        allowfullscreen="true"
+        allow="autoplay; fullscreen"
+        scrolling="no"
+        title="iMers Galactic Shooter">
+    </iframe>
+
+</body>
+</html>
