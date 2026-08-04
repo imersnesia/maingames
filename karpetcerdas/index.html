@@ -2,46 +2,90 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <!-- Meta tag ini SANGAT PENTING untuk mencegah zoom dan memastikan game full mentok di layar HP -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    
-    <!-- Judul yang akan muncul di Tab Browser -->
-    <title>Karpet Cerdas - Powered by imersnesia</title>
-    
-    <!-- Meta tags opsional untuk SEO dan Preview link WhatsApp/Telegram -->
-    <meta name="description" content="Mainkan iMers Galactic Shooter - Game arcade luar angkasa HTML5.">
-    <meta property="og:title" content="iMers Galactic Shooter">
-    <meta property="og:description" content="Mainkan game luar angkasa ini dan puncaki Leaderboard!">
-    <meta name="theme-color" content="#030014">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    >
+
+    <title>Karpet Cerdas Terbang – Game Edukasi Anak</title>
+
+    <!-- SEO -->
+    <meta
+        name="description"
+        content="Mainkan Karpet Cerdas Terbang, game edukasi anak dengan soal Agama, Bahasa Inggris, dan Matematika. Belajar sambil bermain bersama keluarga secara gratis!"
+    >
+    <meta
+        name="keywords"
+        content="game edukasi anak, game belajar anak, permainan anak, belajar matematika, belajar bahasa Inggris, belajar agama, Karpet Cerdas Terbang"
+    >
+    <meta name="author" content="iMersnesia">
+    <meta name="robots" content="index, follow">
+
+    <!-- Preview WhatsApp, Facebook, dan Telegram -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="iMersGames">
+    <meta
+        property="og:title"
+        content="Karpet Cerdas Terbang – Belajar Jadi Petualangan Seru!"
+    >
+    <meta
+        property="og:description"
+        content="Ajak si kecil belajar Agama, Bahasa Inggris, dan Matematika melalui permainan yang seru. Main gratis bersama keluarga!"
+    >
+    <meta
+        property="og:url"
+        content="https://maingames.vercel.app/karpetcerdas"
+    >
+
+    <!-- Ganti dengan URL publik poster square -->
+    <meta
+        property="og:image"
+        content="https://maingames.vercel.app/karpetcerdas/poster-square.png"
+    >
+    <meta property="og:image:alt" content="Poster game Karpet Cerdas Terbang">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+
+    <!-- Preview X/Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta
+        name="twitter:title"
+        content="Karpet Cerdas Terbang – Game Edukasi Anak"
+    >
+    <meta
+        name="twitter:description"
+        content="Belajar Agama, Bahasa Inggris, dan Matematika sambil bermain. Gratis untuk anak dan keluarga!"
+    >
+    <meta
+        name="twitter:image"
+        content="https://maingames.vercel.app/karpetcerdas/poster-square.png"
+    >
+
+    <!-- Warna browser HP -->
+    <meta name="theme-color" content="#129FEA">
 
     <style>
-        /* Reset bawaan browser */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* 
-           Setel html dan body agar mengambil tepat 100% layar.
-           overflow: hidden memastikan layar utama (Vercel) tidak bisa di-scroll, 
-           jadi semua interaksi sentuhan langsung diteruskan ke iFrame (Gamenya).
-        */
-        html, body {
+        html,
+        body {
             width: 100%;
-            /* Gunakan 100dvh (Dynamic Viewport Height) agar tidak tertutup address bar Safari iOS/Chrome Android */
             height: 100vh;
-            height: 100dvh; 
-            background-color: #030014; /* Samakan dengan warna background game agar seamless saat loading */
-            overflow: hidden; 
-            overscroll-behavior: none; /* Mencegah efek bounce-scroll saat ditarik ke bawah */
+            height: 100dvh;
+            background-color: #129FEA;
+            overflow: hidden;
+            overscroll-behavior: none;
         }
 
-        /* Styling iFrame agar memenuhi seluruh ruang tanpa sisa/border */
         .game-frame {
             position: absolute;
-            top: 0;
-            left: 0;
+            inset: 0;
             width: 100%;
             height: 100%;
             border: none;
@@ -49,17 +93,15 @@
         }
     </style>
 </head>
-<body>
 
-    <!-- iFrame menuju link Google Apps Script lo -->
-    <iframe 
-        class="game-frame" 
-        src="https://script.google.com/macros/s/AKfycby6xU0Ef9kjnTRnsPLP2V_NpBKWTsU9-Fnm7oSwXOosV7CjmpGfq89zyD17xVCraxEI3A/exec" 
-        allowfullscreen="true"
+<body>
+    <iframe
+        class="game-frame"
+        src="https://script.google.com/macros/s/AKfycby6xU0Ef9kjnTRnsPLP2V_NpBKWTsU9-Fnm7oSwXOosV7CjmpGfq89zyD17xVCraxEI3A/exec"
+        allowfullscreen
         allow="autoplay; fullscreen"
         scrolling="no"
-        title="iMers Galactic Shooter">
+        title="Karpet Cerdas Terbang – Game Edukasi Anak">
     </iframe>
-
 </body>
 </html>
